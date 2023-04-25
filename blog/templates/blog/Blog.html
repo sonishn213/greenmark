@@ -1,0 +1,86 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="slidearea bannerside" style="padding:0px"  >
+
+			<div class="dz-bnr-inr style-1 overlay-left"  style="background-image: url({% static 'images/banner/bnr1.jpg'%});" >
+				<div class="container-fluid" >
+					<div class="dz-bnr-inr-entry">
+						<h1>Our Blog </h1>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Banner End -->
+		<!-- Blog Large -->
+
+<div class="content-inner">
+	<div class="container">
+		<div class="row ">
+		  {% for article in blogs_grid %}
+		   <div class="col-xl-4 col-md-6 col-sm-6 d-flex align-items-stretch card-container">
+				<div class="dz-card blog-grid style-1 m-b50 aos-item w-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+					<div class="dz-media ">
+						<a href="{% url 'blog:detail' article.Url %}"><img src="{{article.image.url}}" alt="" style="max-height:250px"></a>
+					</div>
+					<div class="dz-info">
+						<div class="dz-meta">
+							<ul>
+								<li class="post-date">
+									<strong>{{article.day}}</strong>
+									<span>{{article.month}}</span>
+								</li>
+								<li class="post-category"><a href="javascript:void(0);" rel="category tag">Blog</a></li>
+								<li class="post-user">By <a href="javascript:void(0);">{{article.author}}</a>
+								</li>
+							</ul>
+						</div>
+						<h3 class="dz-title"><a href="{% url 'blog:detail' article.Url %}">{{article.title}}</a></h3>
+						<div class="dz-post-text text">
+							<p>{{article.snippet}}</p>
+						</div>
+						<div class="read-more">
+							<a href="{% url 'blog:detail' article.Url %}" class="btn btn-primary btn-rounded btn-sm hover-icon">
+								<span>Read More </span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+		   </div>
+		   {% endfor %}
+		 </div>
+         <div class="row">
+			<div class="col-xl-12 col-lg-12">
+				<nav aria-label="Blog Pagination">
+					{% if blogs_grid.has_other_pages %}
+					<ul class="pagination text-center m-b30">
+                        {% if blogs_grid.has_previous %}
+
+						<li class="page-item"><a class="page-link prev" href="?page={{ blogs_grid.previous_page_number }}"><i class="la la-angle-left"></i></a></li>
+						{% else %}
+						<li class="page-item disabled">
+						{% endif %}
+						{% for i in blogs_grid.paginator.page_range %}
+						{% if blogs_grid.number == i %}
+						<li class="page-item active"><a class="page-link" >{{i}}</a></li>
+						{% else %}
+						<li class="page-item "><a class="page-link" href="?page={{i}}">{{i}}</a>
+						{% endif %}
+						{% endfor %}
+						{% if blogs_grid.has_next %}
+						<li class="page-item"><a class="page-link next" href="?page={{ blogs_grid.next_page_number }}"><i class="la la-angle-right"></i></a></li>
+
+						{% else %}
+						<li class="page-item disabled">
+						{% endif %}
+					</ul>
+					{% endif %}
+				</nav>
+			</div>
+		</div>
+	 </div>
+</div>
+{% endblock %}

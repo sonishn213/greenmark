@@ -1,0 +1,424 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+<div class="slidearea bannerside">
+          <div class="side-contact-info">
+            <ul>
+              <li><i class="fas fa-phone-alt"></i> 8050482380</li>
+              <li><i class="fas fa-envelope"></i>enquiregreenmark@gmail.com</li>
+            </ul>
+          </div>
+          <div
+            class="dz-bnr-inr style-1 overlay-left"
+            style="background-image: url({% static 'images/banner/bnr7.jpg' %})"
+          >
+            <div class="container-fluid">
+              <div class="dz-bnr-inr-entry">
+                <h1 >{{portdet.title}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Banner End -->
+        <!-- About US -->
+        <section
+          class="section-full content-inner-2 port-detail"
+          style="
+            background-image: url({% static 'images/background/bg2.png' %});
+            background-position: right bottom;
+            background-size: 100%;
+            background-repeat: no-repeat;
+          "
+        >
+          <div class="container">
+            <div class="row">
+
+              <div
+                class="col-lg-6 col-md-12 align-self-center aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
+
+                <p class="m-b30">
+                  {{portdet.content|safe}}
+                </p>
+
+              </div>
+              <!-- d-lg-block d-none -->
+              <div
+                class="col-lg-6 col-md-12 m-b30 aos-item "
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+              >
+                <img
+                  src="{{portdet.image.url}}"
+                  class="img-fluid "
+
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="content-inner-2">
+          <div class="container">
+            <div class="row lightgallery">
+              <div
+                class="col-lg-12 col-md-12 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+
+                  <img style="width:100%; max-height:600px;" src="{{portdet.Mainimage.url}}" alt="" />
+
+
+              </div>
+              <div
+                class="col-lg-4 col-md-4 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img style="height:460px;" src="{{portdet.image1.url}}" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{portdet.image1.url}}"
+                      data-src="{{portdet.image1.url}}"
+                      class="view-btn lightimg"
+                      title="{{portdet.title.category}}"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img style="height:460px;" src="{{portdet.image2.url}}" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{portdet.image2.url}}"
+                      data-src="{{portdet.image2.url}}"
+                      class="view-btn lightimg"
+                      title="{{portdet.title.category}}"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+              >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img style="height:460px;" src="{{portdet.image3.url}}" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{portdet.image3.url}}"
+                      data-src="{{portdet.image3.url}}"
+                      class="view-btn lightimg"
+                      title="{{portdet.title.category}}"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+            >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img style="height:460px;" src="{{portdet.image4.url}}" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{portdet.image4.url}}"
+                      data-src="{{portdet.image4.url}}"
+                      class="view-btn lightimg"
+                      title="{{portdet.title.category}}"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+            >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img style="height:460px;" src="{{portdet.image5.url}}" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{portdet.image5.url}}"
+                      data-src="{{portdet.image5.url}}"
+                      class="view-btn lightimg"
+                      title="{{portdet.title.category}}"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 m-b30 aos-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+            >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img style="height:460px;" src="{{portdet.image6.url}}" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{portdet.image6.url}}"
+                      data-src="{{portdet.image6.url}}"
+                      class="view-btn lightimg"
+                      title="{{portdet.title.category}}"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <section class="content-inner-1">
+          <div class="container">
+            <div class="section-head style-1 text-center">
+              <h6 class="sub-title text-primary">OUR PORTFOLIOS</h6>
+              <h2 class="title">Our Latest Projects</h2>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div
+              class="swiper-container swiper-portfolio lightgallery aos-item"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="dz-box overlay style-1 mt-5">
+                    <div class="dz-media">
+                      <img src="images/work/work-1/pic-1.jpg" alt="" />
+                    </div>
+                    <div class="dz-info">
+                      <span
+                        data-exthumbimage="images/work/work-1/pic-1.jpg"
+                        data-src="images/work/work-1/pic-1.jpg"
+                        class="view-btn lightimg"
+                        title="INTERIOR DESIGN"
+                      ></span>
+                      <h6 class="sub-title">INTERIOR DESIGN</h6>
+                      <h4 class="title m-b15">
+                        <a href="portfolio-details.html"
+                          >Modern House Interior <span>New York</span></a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="dz-box overlay style-1">
+                    <div class="dz-media">
+                      <img src="images/work/work-1/pic-2.jpg" alt="" />
+                    </div>
+                    <div class="dz-info">
+                      <span
+                        data-exthumbimage="images/work/work-1/pic-2.jpg"
+                        data-src="images/work/work-1/pic-2.jpg"
+                        class="view-btn lightimg"
+                        title="ARCHITECTURAL"
+                      ></span>
+                      <h6 class="sub-title">ARCHITECTURAL</h6>
+                      <h4 class="title m-b15">
+                        <a href="portfolio-details.html"
+                          >Residential Project, <span>Paris</span></a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="dz-box overlay style-1 mt-5">
+                    <div class="dz-media">
+                      <img src="images/work/work-1/pic-3.jpg" alt="" />
+                    </div>
+                    <div class="dz-info">
+                      <span
+                        data-exthumbimage="images/work/work-1/pic-3.jpg"
+                        data-src="images/work/work-1/pic-3.jpg"
+                        class="view-btn lightimg"
+                        title="INTERIOR DESIGN"
+                      ></span>
+                      <h6 class="sub-title">INTERIOR DESIGN</h6>
+                      <h4 class="title m-b15">
+                        <a href="portfolio-details.html"
+                          >Modern Family House, <span>Italy</span></a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="dz-box overlay style-1">
+                    <div class="dz-media">
+                      <img src="images/work/work-1/pic-4.jpg" alt="" />
+                    </div>
+                    <div class="dz-info">
+                      <span
+                        data-exthumbimage="images/work/work-1/pic-4.jpg"
+                        data-src="images/work/work-1/pic-4.jpg"
+                        class="view-btn lightimg"
+                        title="ARCHITECTURAL"
+                      ></span>
+                      <h6 class="sub-title">ARCHITECTURAL</h6>
+                      <h4 class="title m-b15">
+                        <a href="portfolio-details.html"
+                          >Residential Project, <span>Paris</span></a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- Our Works -->
+        <section class="content-inner-1">
+          <div class="container">
+            <div class="row section-head-bx align-items-center">
+              <div class="col-md-8">
+                <div class="section-head style-1">
+                  <h6 class="sub-title text-primary">OUR PORTFOLIOS</h6>
+                  <h2 class="title">Our Latest Projects</h2>
+                </div>
+              </div>
+              <div class="col-md-4 text-start text-md-end mb-4 mb-md-0">
+                <a href="{% url 'allport:Portfolio' %}" class="btn-link"
+                  >See All Projects <i class="fas fa-plus scale08"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+
+            <div
+              class="swiper-container swiper-portfolio lightgallery aos-item"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <div class="swiper-wrapper">
+                {% for img in imgs %}
+                <div class="swiper-slide">
+                  <div class="dz-box overlay style-1 mt-5">
+                    <div class="dz-media">
+                      <img style="height:470px;" src="{{img.image.url}}" alt="" />
+                    </div>
+                    <div class="dz-info">
+                      <span
+                        data-exthumbimage="{{img.image.url}}"
+                        data-src="{{img.image.url}}"
+                        class="view-btn lightimg"
+                        title="{{img.category}}"
+                      ></span>
+                      <h6 class="sub-title">{{img.category}}</h6>
+                      <h4 class="title m-b15">
+                        <a href="{% url 'allport:portdetail' img.title %}"
+                          >{{img.title}}</a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+
+          <div
+            class="content-inner bg-secondary subscribe-area"
+            style="
+              background-image:url({% static 'images/background/bg2-1.png' %});
+              background-position: center;
+            "
+          >
+            <div class="container">
+              <div class="row subscribe-content">
+                <div
+                  class="col-lg-6 aos-item"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
+                  <div class="section-head style-1 mb-0">
+                    <h6 class="sub-title text-primary">Contact Us</h6>
+                    <h2 class="title text-white">Get In Touch With Us !</h2>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-6 pt-2 aos-item text-end"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
+                  <!-- <form
+                    class="dzSubscribe dz-subscription mt-3"
+                    action="https://visva.dexignzone.com/xhtml/script/mailchamp.php"
+                    method="post"
+                  >
+                    <div class="dzSubscribeMsg Msg dz-subscription-msg"></div>
+                    <div class="input-group">
+                      <input
+                        name="dzEmail"
+                        required="required"
+                        class="form-control"
+                        placeholder="Enter Your Email Address..."
+                        type="email"
+                      />
+                      <button
+                        name="submit"
+                        value="Submit"
+                        type="submit"
+                        class="btn btn-primary btn-rounded"
+                      >
+                        Subscribe Now <i class="m-l10 fas fa-plus scale08"></i>
+                      </button>s
+                    </div>
+                  </form> -->
+                  <a href="{% url 'contactus:reach' %}">
+                    <button
+                      class="btn btn-primary btn-rounded"
+                    >
+                      Contact Now <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End oF Our Works -->
+
+{% endblock %}

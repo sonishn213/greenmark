@@ -1,0 +1,128 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% load social_share %}
+{% block content %}
+   <div class="content-inner">
+		<div class="container">
+				<div class="row ">
+					<h1 class="dz-title">{{BLOG.Url.title}}</h1>
+					<div class="dz-meta">
+						<ul>
+							<li>{{BLOG.Url.day}}-{{BLOG.Url.month}}-{{BLOG.Url.year}}</li>
+							<li class="post-user">By <a href="javascript:void(0);">{{BLOG.Url.author}}</a></li>
+						</ul>
+					</div>
+					<div class="col-xl-12 col-lg-12 ">
+						<div class="dz-card blog-single style-1">
+							<div class="dz-media">
+								<img src="{{BLOG.Url.image.url}}" style="height:720px" alt="">
+							</div>
+							<div class="dz-info">
+								<div class="dz-post-text">
+
+									<blockquote class="block-quote style-1">
+										<p> {{BLOG.quote}}</p>
+										<cite>{{BLOG.quoteauthor}}</cite>
+									</blockquote>
+									<div class="alignleft w-50">
+										<img alt="" src="{{BLOG.othimage.url}}" class="w-100"/>
+									</div>
+									<p>{{BLOG.content|safe}}</p>
+
+								</div>
+								<div class="post-footer">
+									<div class="post-tags">
+										<strong>Tags:</strong>
+										<a href="javascript:void(0);" rel="tag">{{BLOG.Url.category}}</a>
+									</div>
+									<div class="dz-share-post">
+										<h5 class="title">Share :</h5>
+										<ul class="dz-social-icon">
+
+                                            <li><a class="fab fa-facebook-f" href="https://www.facebook.com/sharer/sharer.php?u={{  request.build_absolute_uri  }}" target="_blank"></a></li>
+											<li><a class="fab fa-twitter" href="https://twitter.com/home?status=Read%20the%20latest%20blog%20now!{{  request.build_absolute_uri  }}" target="_blank"></a></li>
+											<li><a class="fab fa-linkedin" href="https://www.linkedin.com/shareArticle?url = {{  request.build_absolute_uri  }} " target="_blank"></a></li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- blog start -->
+						<div class="author-box blog-user m-b60">
+							<div class="author-profile-info">
+								<div class="author-profile-pic">
+									<img src="{{BLOG.authorpic.url}}" alt="Profile Pic">
+								</div>
+								<div class="author-profile-content">
+									<h6>{{BLOG.Url.author}}</h6>
+									<p>{{BLOG.aboutauthor}}
+									<ul class="list-inline m-b0">
+										<li>
+											<a href="{{BLOG.insta_url}}" target="_blank" class="btn-link">
+												<i class="fab fa-instagram"></i>
+											</a>
+										</li>
+										<li>
+											<a href="{{BLOG.fb_url}}" target="_blank" class="btn-link">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</li>
+										<li>
+											<a href="{{BLOG.t_url}}" target="_blank" class="btn-link">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- Related Blogs -->
+
+						<div class="row extra-blog style-1">
+							<div class="col-md-12">
+								<div class="widget-title">
+									<h4 class="title"> Related Blogs</h4>
+									<div class="dz-separator style-1 text-primary mb-0"></div>
+								</div>
+							</div>
+							<div class="row ">
+                               {% for article in related%}
+								<div class="col-xl-4 col-md-6 col-sm-6  d-flex align-items-stretch card-container ">
+									<div class="dz-card blog-grid style-1 m-b50 aos-item w-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+										<div class="dz-media">
+											<a href="{% url 'blog:detail' article.Url %}"><img src="{{article.image.url}}" style="max-height:250px;"alt=""></a>
+										</div>
+										<div class="dz-info">
+											<div class="dz-meta">
+												<ul>
+													<li class="post-date">
+														<strong>{{article.day}}</strong>
+														<span>{{article.month}}</span>
+													</li>
+													<li class="post-category"><a href="javascript:void(0);" rel="category tag">Blog</a></li>
+													<li class="post-user">By <a href="javascript:void(0);">{{article.author}}</a>
+												   </li>
+												</ul>
+											</div>
+											<h3 class="dz-title"><a href="blog-details.html">{{article.title}}</a></h3>
+											<div class="dz-post-text text">
+												<p>{{article.snippet}}</p>
+											</div>
+											<div class="read-more">
+												<a href="{% url 'blog:detail' article.Url %}" class="btn btn-primary btn-rounded btn-sm hover-icon"><span>Read More </span><i class="fas fa-arrow-right"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+
+					</div>
+				</div>
+		</div>
+   </div>
+
+{% endblock %}

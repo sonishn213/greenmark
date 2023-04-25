@@ -1,0 +1,80 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+	<!-- Meta -->
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="content-inner">
+    <div class="container">
+        <div class="row align-items-center about-bx3">
+            <div class="col-lg-6 m-b30">
+                <div class="dz-media">
+                    <img src="{% static 'images/about/aaa.jpg' %}" alt="" class="img1 aos-item aos-init aos-animate" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
+                </div>
+            </div>
+            <div class="col-lg-6 m-b30 aos-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+                <div class="section-head style-1">
+                    <h1 class="sub-title text-primary">About Us</h1>
+                    <h2 class="title">Your expectation is our commitment</h2>
+                </div>
+
+                <p style="font-size:22px ;font-weight=400">GREEN MARK CONCEPTS caters Eco-sustainable Engineering, Design, Planning, and Execution. Yes, we strive to
+                    get the best outcome and when we feed ourselves with everyday changes in the field of Architecture & Constructions.
+                    </p>
+                
+                <!-- <a href="about-us.html" class="btn shadow-primary btn-primary btn-rounded">READ MORE <i class="m-l10 las la-plus"></i></a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+	<!-- Testimonials -->
+    <section class="bg-secondary test-area" style="background-image: url(images/background/bg2-1.png); background-position: center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 aos-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="content-inner-1">
+                        <div class="section-head style-1">
+                            <h1 class="text-primary sub-title">Mission and vision</h1>
+                            <h2 class="title text-white">Let us contribute to the Nature</h2>
+                        </div>
+                        <div class="testi-inner">
+                            <div class="swiper-container testimonial-swiper-2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-2">
+                                            <div class="testimonial-text">
+                                                <p>"Passion to revive the lifestyles of people to adopt the “Eco-sustainable Green Trend Building”.
+                                                    Our vision is to simply create interesting new spaces and structures which are as much sustainableas possible. This creates more contented insight when anyone situates with the name GREEN MARK CONCEPTS, be it our team or the ones who use our makes. Our collaborations with our partners and clients proves the expertize from Architecting to Executing."</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media-full">
+                        <img src="{% static 'images/about/pic4.jpg' %}" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </section>
+
+
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+        <section class="content-inner-1 line-img overflow-hidden">
+          <div class="container">
+            <div class="site-filters style-1 clearfix center">
+              <ul class="filters" data-toggle="buttons">
+                <li class="btn active">
+                  <input type="radio" />
+                  <a href="javascript:void(0);">All</a>
+                </li>
+                <li data-filter=".Architecture" class="btn">
+                  <input type="radio" />
+                  <a href="javascript:void(0);">Architecture</a>
+                </li>
+                <li data-filter=".Interior.Design" class="btn">
+                  <input type="radio" />
+                  <a href="javascript:void(0);">Interior Design</a>
+                </li>
+                <li data-filter=".construction" class="btn">
+                  <input type="radio" />
+                  <a href="javascript:void(0);">Construction</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="container">
+            <ul id="masonry" class="row lightgallery">
+              {% for images in AllImages%}
+              <li
+                class="card-container col-xl-4 col-md-6 col-sm-6 {{images.category}} m-b30"
+              >
+                <div class="dz-box overlay style-1">
+                  <div class="dz-media">
+                    <img src="{{images.image.url}}" style="height:600px" alt="" />
+                  </div>
+                  <div class="dz-info">
+                    <span
+                      data-exthumbimage="{{images.image.url}}"
+                      data-src="{{images.image.url}}"
+                      class="view-btn lightimg"
+                      title="{{images.category}}"
+                    ></span>
+                    <h6 class="sub-title">{{images.category}}</h6>
+                    <h4 class="title m-b15">
+                      <a href="{% url 'allport:portdetail' images.title %}"
+                        >{{images.title}}</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+{% endblock %}

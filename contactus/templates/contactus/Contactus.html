@@ -1,0 +1,124 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+<section class="content-inner-2">
+			<div class="container text-center">
+				<h1>Get in Touch With Us</h1>
+				<p class="text-justify">
+					Together we can build your dream structure with a Green Concept of sustainable living.<br>
+Be a part in transforming your Lifestyle.
+Let us contribute to the Nature.
+				  </p>
+			</div>
+		</section>
+		<!-- Title Section End -->
+		<section class="content-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+						<div class="icon-bx-wraper style-8 bg-white" data-name="01">
+							<div class="icon-md m-r20">
+								<span class="icon-cell text-primary"><i class="flaticon-telephone"></i></span>
+							</div>
+							<div class="icon-content">
+								<h4 class="tilte m-b10">Call Now</h4>
+								<p class="m-b0">8050482380</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+						<div class="icon-bx-wraper style-8 bg-white" data-name="02">
+							<div class="icon-md m-r20">
+								<span class="icon-cell text-primary"><i class="flaticon-email"></i></span>
+							</div>
+							<div class="icon-content">
+								<h4 class="tilte m-b10">Location</h4>
+								<p class="m-b0">Bharath ram,
+Green Mark Concepts, Workology, beside NOVEL OFFICE KORAMANGALA, 57 13th Cross, Baldwins Road, Koramangala, Bangalore-560030</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+						<div class="icon-bx-wraper style-8 bg-white" data-name="03">
+							<div class="icon-md m-r20">
+								<span class="icon-cell text-primary"><i class="flaticon-placeholder"></i></span>
+							</div>
+							<div class="icon-content">
+								<h4 class="tilte m-b10">Email Now</h4>
+								<p class="m-b0">enquiregreenmark@gmail.com<br/> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Form -->
+		<section class="content-inner-1 pt-0">
+			<div class="map-iframe">
+<!--				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825624477!2d75.65046970649679!3d26.88544791796718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1500819483219" class="align-self-stretch radius-sm" style="border:0; width:100%; min-height:100%;" allowfullscreen></iframe>-->
+			<img class="w-100"  src="{% static 'images/contact.jpg'%}">
+			</div>
+			<div class="container">
+				<div class="contact-area aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+					<div class="section-head style-1 text-center">
+						<h6 class="text-primary" style="letter-spacing: 4px;">Contact Us</h6>
+						<h2 class="title">Get In Touch With Us</h2>
+					</div>
+					<form class="dz-form dzForm contact-bx "  method="POST" >
+						{% csrf_token %}
+						<input type="hidden" class="form-control" >
+<!--						name="dzToDo" value="Contact"-->
+						<div class="dzFormMsg"></div>
+						<div class="row sp10">
+                            <div class="col-sm-6 mx-auto">
+								<div class="m-b20">
+									<div class="input-group">
+										<input type="text" class="form-control" required name="name" placeholder="First Name">
+									</div>
+								</div>
+								<div class="m-b20">
+									<div class="input-group">
+										 <input type="email" class="form-control"  name="email" placeholder="Email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+									</div>
+								</div>
+								<div class="m-b20">
+									<div class="input-group">
+										<input type="tel" class="form-control" required name="phonenumber" placeholder="Phone No." pattern="[1-9]{1}[0-9]{9}">
+									</div>
+								</div>
+								<div class="m-b20">
+									<div class="input-group">
+
+
+      								<select name="services" id="services" class="form-control">
+										<option value="">Select Services</option>
+        							<option value="Architectural Designing">Architectural Designing</option>
+        							<option value="Interiors">Interiors</option>
+        							<option value="Civil Structures">Civil Structures</option>
+        							<option value="3D Visualization">3D Visualization</option>
+        							<option value="Renovations">Renovations</option>
+        								<option value="Project Management">Project Management</option>
+        								<option value="Contracting">Contracting</option>
+        								<option value="Product Designing">Product Designing</option>
+										<option value="Estimation & Valuation">Estimation & Valuation</option>
+										<option value="Government Projects">Government Projects</option>
+										<option value="CSR Activities">CSR Activities</option>
+      									</select>
+									</div>
+								</div>
+								<div class="m-b20">
+									<div class="input-group">
+										<textarea required name="message" rows="5" class="form-control" placeholder="Message"></textarea>
+									</div>
+								</div>
+
+								<div class="text-center">
+									<button name="submit" type="submit" value="submit" class="btn btn-primary btn-rounded" >SUBMIT<i class="m-l10 fas fa-caret-right"></i></button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+{% endblock %}

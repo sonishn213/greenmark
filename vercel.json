@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "Greenmark/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Greenmark/wsgi.py"
+    }
+  ]
+}
